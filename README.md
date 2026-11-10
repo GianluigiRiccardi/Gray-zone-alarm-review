@@ -42,13 +42,15 @@ The idea comes from two sources:
 - classify: `TTC ≤ 2 s` Warning, `≤ 4 s` Caution, otherwise Normal. These requirements come from the workshop;
 - **gray zone**: frames within ±0.5 s of a threshold get status `Review`, and a decision log table is created with empty human fields.
 
+![Time to collision with Warning, Caution and Normal bands and the gray zones](figures/ttc_grayzone.png)
+
 **Step 2 – Persistence and event-based review** (`code/compareGrayZone.m`):
 
 - a class is confirmed only after 3 consecutive frames;
 - the gray zone is narrowed to ±0.25 s;
 - consecutive review frames are grouped into events, so each event gets one decision.
 
-**Results.** Before: 38 of 204 frames (19%) needed review, and two single-frame spikes became Warnings. Those spikes are most likely objects detected for only one frame. After: 2 review events and no unconfirmed Warnings. The price is about 0.1 s of confirmation delay. On a vehicle that delay must be weighed against braking needs. On a pump degrading over weeks it is irrelevant. In process safety terms, the worst-case delay of any filter must fit within the process safety time.
+**Results.** Before: 38 of 204 frames (19%) needed review, and two single-frame spikes were classified as Warning: one went through automatically, the other sat exactly on the edge of the gray zone and was flagged for review. Those spikes are most likely objects detected for only one frame. After: 2 review events and no unconfirmed Warnings. The price is about 0.1 s of confirmation delay. On a vehicle that delay must be weighed against braking needs. On a pump degrading over weeks it is irrelevant. In process safety terms, the worst-case delay of any filter must fit within the process safety time.
 
 **Verification.**
 
