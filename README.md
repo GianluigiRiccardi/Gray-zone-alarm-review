@@ -83,4 +83,4 @@ The code was drafted with an AI assistant. I defined the requirements and the re
 
 ---
 
-Gianluigi Riccardi · Operations Manager, Seveso III upper-tier coastal fuel depot · [gianluigiriccardi.github.io](https://gianluigiriccardi.github.io) · [LinkedIn](https://www.linkedin.com/in/gianluigi-riccardi-ai-industrial)
+Gianluigi Riccardi · Operations Manager, coastal fuel depot · [gianluigiriccardi.github.io](https://gianluigiriccardi.github.io) · [LinkedIn](https://www.linkedin.com/in/gianluigi-riccardi-ai-industrial)
